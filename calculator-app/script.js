@@ -1,3 +1,14 @@
+function applyDerivedTheme() {
+  if (!window.chroma) return;
+  const root = document.documentElement;
+  const base = getComputedStyle(root).getPropertyValue('--theme-base').trim();
+  root.style.setProperty('--theme-dark', chroma(base).darken(1.4).hex());
+  root.style.setProperty('--theme-light', chroma(base).brighten(0.8).hex());
+  root.style.setProperty('--theme-lighter', chroma(base).brighten(1.6).hex());
+}
+
+applyDerivedTheme();
+
 const expressionEl = document.getElementById('expression');
 const resultEl = document.getElementById('result');
 

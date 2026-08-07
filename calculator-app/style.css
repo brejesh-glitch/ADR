@@ -1,3 +1,10 @@
+:root {
+  --theme-base: #2e7d32;
+  --theme-dark: #1b5e20;
+  --theme-light: #66bb6a;
+  --theme-lighter: #81c784;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -10,7 +17,7 @@ body {
   justify-content: center;
   padding: 24px;
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  background: linear-gradient(135deg, #ff5f6d 0%, #b71c1c 100%);
+  background: linear-gradient(135deg, var(--theme-light) 0%, var(--theme-dark) 100%);
 }
 
 .calculator {
@@ -85,19 +92,19 @@ body {
 }
 
 .key.operator {
-  background: #b71c1c;
+  background: var(--theme-base);
   color: #fff;
 }
 
 .key.operator:hover {
-  background: #d32f2f;
+  background: var(--theme-light);
 }
 
 .key.equals {
-  background: #ff5f6d;
+  background: var(--theme-light);
   color: #fff;
 }
 
 .key.equals:hover {
-  background: #ff7b86;
+  background: var(--theme-lighter);
 }
